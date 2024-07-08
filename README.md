@@ -13,13 +13,13 @@ To get a local copy of the project up and running on your machine, follow these 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Witty-Wizard/Intern-Project-Report.git
+    git clone https://github.com/TheSoumilArora/Internship-Project-Report.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd Intern-Project-Report
+    cd Internship-Project-Report
     ```
 
 3. Open the main.tex file using your preferred LaTeX editor.
@@ -30,4 +30,4 @@ The LaTeX files can be compiled using a LaTeX distribution such as TeX Live or M
 
 ## Deployment
 
-The project report is automatically built and deployed using GitHub Actions. The built PDF file is available on [GitHub Pages](https://witty-wizard.github.io/Intern-Project-Report/main.pdf).
+The project report is automatically built and deployed using GitHub Actions. The built PDF file is available on [GitHub Pages](https://thesoumilarora.github.io/Internship-Project-Report/main.pdf).
