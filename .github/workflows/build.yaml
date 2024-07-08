@@ -13,16 +13,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up TeX Live
-      uses: latex-actions/setup-texlive@v1
-
     - name: Compile LaTeX document
-      run: |
-        mkdir -p out
-        latexmk -pdf -output-directory=out main.tex
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
+        publish_dir: ./  # Root directory where the PDF will be generated
+        publish_branch: gh-pages  # Specify the gh-pages branch
