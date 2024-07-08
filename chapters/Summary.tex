@@ -1,0 +1,94 @@
+I got the opportunity to do my internship at Statcon Electronics India Ltd.
+Statcon Electronics established in 1986 is one of India's largest ISO
+9001-20151 certified manufacturer of Static energy Conversion system. During my
+internship at Satcon Electronics India Ltd, Noida, I was first assigned to
+explore Space Vector Modulation technique and then make a simulation for a
+front end converter using Space Vector Modulation. I was part of the Embedded
+Software team and my task was to develop a control algorithm for the front end
+converter.\\
+
+The aim of the project to design a Active Front End converter for a Hybrid
+inverter,aiming to enhance its efficiency and performance while reducing
+harmonic distortions and improving the power factor.
+
+\section{Timeline}
+My internship at Statcon Electronics India Ltd started on 10th January, 2024.
+My mentor gave me the task of exploring Space Vector Modulation and developing
+control algorithm for the front end converter. This timeline will briefly
+explain the course of my internship from beginning to end.
+
+\subsection{January}
+In January, I started learning about Space Vector Pulse Width Modulation
+(SVPWM). This involved understanding two important things: the Clarke and Park
+transforms. These transforms help to change three-phase voltages into a simpler
+two-dimensional form, making it easier to control three-phase systems. The
+Clarke transform turns three-phase voltages into two-phase parts, while the
+Park transform changes these parts into a fixed frame of reference. I also
+learned about space vectors, which show how the three-phase voltages combine.
+This knowledge helped me understand SVPWM better. It's a technique that uses
+space vectors to control how inverters produce voltage. This exploration gave
+me a better grasp of how SVPWM works and its uses in power electronics.
+
+\subsection{Feburary}
+During February, I immersed myself in the study of the Clarke and Park
+transforms, essential mathematical tools used in analyzing three-phase
+electrical systems.The Clarke transform simplifies three-phase voltages into
+two-phase components, making it easier to understand and analyze complex
+electrical systems. Similarly, the Park transform further refines these
+components into a fixed frame of reference, streamlining the analysis and
+control of electrical signals. Alongside theoretical exploration, I practically
+experimented by developing Python code to implement and test these
+transformations. This hands-on approach not only deepened my understanding of
+the transforms but also provided valuable insights into their real-world
+applications and implementation challenges.
+
+\subsection{March}
+
+During March, I worked on developing and testing a three-phase Phase-Locked
+Loop (PLL) algorithm using Python. This algorithm used the Clarke and Park
+transforms to precisely estimate the angle of the space vector in the
+three-phase system. Following the initial testing phase of the PLL algorithm in
+Python, I transitioned to Simulink/MATLAB for further simulation. Within the
+Simulink environment, I used MATLAB function blocks to implement the PLL
+algorithm. Once this was completed, I proceeded to make a three-phase inverter
+in Simulink using IGBT components. Leveraging MATLAB function blocks and the
+output of the PLL, I then generated gate timing signals for the Front end of
+the inverter, ensuring precise control and synchronization of the electrical
+signals.
+
+\subsection{April}
+
+In April, I worked toward fine-tuning the Proportional-Integral (PI) controller
+for the Phase-Locked Loop (PLL) using the Ziegler–Nichols method. This involved
+adjusting the parameters of the PI controller to optimize the performance of
+the PLL algorithm. By employing the Ziegler–Nichols method, I aimed to achieve
+stability and responsiveness in tracking and synchronizing the phase of
+electrical signals effectively. Additionally, I implemented a control loop in
+MATLAB function blocks to measure the current flowing from the front end to the
+grid. This control loop allowed for the adjustment of the output voltage to
+either draw or supply the desired current, depending on the system
+requirements.
+
+\subsection{May}
+In May, I completed the simulation and proceeded with the actual implementation
+of the front end on hardware. I began by selecting a suitable microcontroller
+with DSP capability, opting for the STM32F411 microcontroller. Then, I
+initiated the coding process, developing functions for voltage transformations,
+PID controller, and Phase Lock Loop (PLL). Additionally, I integrated unit
+testing using Unity to test individual functions of the code. Moreover, I
+created a native target to provide sample signals to the code, generating
+output graphs for viewing. This approach allowed me to test my code without the
+need for a microcontroller.
+
+\subsection{June}
+In June, I relocated from the Noida office to the Hyderabad office to continue
+developing both the code and hardware. While in Hyderabad, I familiarized
+myself with the standard coding structure required for our projects and
+proceeded with the development process.
+
+I began writing the code for the microcontroller, During this phase, I learned
+about Direct Memory Access (DMA) and interrupts, which I used to sample the
+input voltage. Using these sampled voltages as reference values, I generated
+the Space Vector output in the form of Pulse Width Modulation (PWM) signals
+from the microcontroller. This approach ensured precise and efficient control
+of the system.
