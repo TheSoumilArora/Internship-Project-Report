@@ -21,6 +21,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_dir: ./  # Root directory where the PDF will be generated
         publish_branch: gh-pages  # Specify the gh-pages branch
