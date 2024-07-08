@@ -1,0 +1,129 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper, width=180mm,top=10mm,bottom=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgf-umlcd}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
+\usetikzlibrary{positioning, shapes.geometric, arrows,calc,arrows.meta}
+\graphicspath{{images/}}
+
+% Define block styles
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, minimum size=1cm, node distance=1.5cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pidblock} = [draw, dashed, inner sep=0.5cm, rounded corners]
+
+% Define custom colors
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Set up listings for MATLAB, Python, and C
+\lstset{ 
+    backgroundcolor=\color{backcolour},   % choose the background color
+    basicstyle=\ttfamily\footnotesize,  % the size of the fonts that are used for the code
+    breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                 % sets automatic line breaking
+    captionpos=b,                    % sets the caption-position to bottom
+    frame=single,                    % adds a frame around the code
+    keepspaces=true,                 % keeps spaces in text, useful for keeping indentation
+    numbers=left,                    % where to put the line-numbers
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    showspaces=false,                % show spaces adding particular underscores
+    showstringspaces=false,          % underline spaces within strings
+    showtabs=false,                  % show tabs within strings adding particular underscores
+    tabsize=2,                       % sets default tabsize to 2 spaces
+    title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% MATLAB settings
+\lstdefinestyle{MATLAB}{
+    language=Matlab,
+    keywordstyle=\color{blue},
+    commentstyle=\color{mygreen},
+    stringstyle=\color{mymauve}
+}
+
+% Python settings
+\lstdefinestyle{Python}{
+    language=Python,
+    keywordstyle=\color{blue},
+    commentstyle=\color{mygreen},
+    stringstyle=\color{mymauve}
+}
+
+% C settings
+\lstdefinestyle{C}{
+    language=C,
+    keywordstyle=\color{blue},
+    commentstyle=\color{mygreen},
+    stringstyle=\color{mymauve}
+}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} 
+\renewcommand{\cftchapfont}{\normalfont\bfseries}
+
+\newcommand{\name}{Soumil Arora}
+\newcommand{\faculty}{Assistant Professor Muzaffar Imam}
+\newcommand{\industry}{Mr. Sarv Parteek Singh}
+\newcommand{\director}{Mr. M.S. Saini}
+\newcommand{\sid}{21105005}
+
+\begin{document}
+
+\input{titlepage}
+
+\pagenumbering{roman}
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering}{\thechapter.}{20pt}{\Large}
+
+\chapter*{Declaration}
+\input{chapters/declaration}
+
+\chapter*{Acknowledgement}
+\input{chapters/acknowledgement}
+
+\titleformat{\chapter}[hang]
+{\normalfont\LARGE\bfseries}{\thechapter.}{20pt}{\LARGE}
+
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Summary}
+\input{chapters/Summary.tex}
+\chapter{Introduction}
+\input{chapters/Introduction.tex}
+\chapter{Work}
+\input{chapters/Work.tex}
+\chapter{Review}
+\input{chapters/Review.tex}
+\chapter{Details of work}
+\input{chapters/Details.tex}
+\chapter{Conclusion and Future scope}
+\input{chapters/Conclusion.tex}
+\begin{thebibliography}{9}
+    \input{chapters/References.tex}
+\end{thebibliography}
+
+\end{document}

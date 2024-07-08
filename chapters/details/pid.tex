@@ -1,0 +1,250 @@
+The Proportional Integral Derivative (PID) Controller\cite{pid-wikipedia} is
+the most widely used control technique in industry. The popularity of PID
+Controller because of their robust performance in a wide range of operating
+condition and its simple functionality. Industrial processes are subjected to
+variation in parameters and parameters perturbations.
+
+\begin{figure}[ht]
+    \centering
+    \resizebox{\linewidth}{!}{
+        \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+            % Nodes
+            \node [input, name=input] {};
+            \node [sum, right of=input] (sum) {};
+            \node at ([xshift=-0.3cm]sum.center) {$+$};
+            \node at ([yshift=-0.3cm]sum.center) {$-$};
+
+            \node [block, right of=sum, node distance=3cm] (P) {Proportional};
+            \node [block, below of=P, node distance=3cm] (I) {Integral};
+            \node [block, above of=P, node distance=3cm] (D) {Derivative};
+
+            \node [sum, right of=P, node distance=4.5cm] (sumPID) {$+$};
+            \node [block, right of=sumPID, node distance=3.5cm] (plant) {Plant};
+            \node [output, right of=plant, node distance=3.5cm] (output) {};
+            \node [block, below of=plant, node distance=4.5cm] (sensor) {Sensor};
+
+            % PID Controller dashed box
+            \node [pidblock, fit=(P) (I) (D) (sumPID), label=above:PID Controller] {};
+
+            % Connections
+            \draw [draw,->] (input) -- node[name=setpoint,pos=-0.5] {Setpoint ($u$)} (sum);
+            \draw [->] (sum.east) -- ++(0.5,0) |- (P.west);
+            \draw [->] (sum.east) -- ++(0.5,0) |- (I.west);
+            \draw [->] (sum.east) -- ++(0.5,0) |- (D.west);
+
+            \draw [->] (P) -- (sumPID);
+            \draw [->] (I) -| (sumPID);
+            \draw [->] (D) -| (sumPID);
+
+            \draw [->] (sumPID) -- (plant);
+            \draw [->] (plant) -- node [name=measure] {$Y$} (output);
+            \draw [->] (measure) |- (sensor);
+            \draw [->] (sensor) -| node[pos=0.9] {Measured Value} (sum); % Adjusted position here
+        \end{tikzpicture}
+    }
+    \caption{PID Controller Diagram.}
+    \label{fig:pid_diagram}
+\end{figure}
+
+\subsection{What is PID Controller?}
+A PID Controller consists of a controlled system known as the Plant and a
+Controller designed to manage the overall system behavior. The transfer
+function of the PID Controller in the S-domain is given by:
+\begin{equation*}
+    K_p + \frac{K_i}{S}+K_d S
+\end{equation*}
+
+Where $K_p$ is the proportional gain, $K_i$ is the integral gain, and $K_d$ is
+the derivative gain. The error ($e$) is the difference between the desired
+reference value ($R$) and the actual output ($Y$). The controller processes
+this error signal, computing its derivative and integral. The signal sent to
+the actuator ($u$) is:
+\begin{equation*}
+    u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) \, d\tau + K_d \frac{de(t)}{dt}
+\end{equation*}
+
+This output signal ($u$) is sent to the plant, resulting in a new output ($Y$).
+This output is then fed back to compute a new error ($e$). The PID Controller
+continuously processes the new error signal, calculating its derivative and
+integral in an ongoing loop.
+
+\subsection{Feedforward Control}
+
+While PID controllers are effective at correcting errors based on feedback from
+the process variable (Process Variable), they can be enhanced by incorporating
+Feedforward Control. Feedforward Control is a proactive approach that
+anticipates disturbances and preemptively adjusts the controller output to
+minimize their effects on the Process Variable.
+
+\subsubsection{Why Use Feedforward Control?}
+
+In industrial processes, disturbances such as changes in feed flow rates,
+variations in raw material quality, or environmental factors can significantly
+impact the Process Variable. These disturbances are often unpredictable and can
+lead to deviations from the setpoint, requiring the PID controller to react and
+correct the error. However, by the time the disturbance affects the Process
+Variable, some amount of error may have already occurred.\\
+
+Feedforward Control\cite{feedforward-wikipedia} addresses this issue by using a
+model or direct measurement of the disturbance to predict its effect on the
+Process Variable. This prediction is used to generate a feedforward signal that
+is added to the PID controller's output. By doing so, the controller
+compensates for the disturbance before it affects the Process Variable, thereby
+reducing the error and improving the response time.
+
+\subsubsection{Types of Feedforward Control}
+
+There are two main types of Feedforward Control:
+
+\begin{enumerate}
+    \begin{figure}[ht]
+        \centering
+        \resizebox{\linewidth}{!}{
+            \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+                % Nodes
+                \node [input, name=input] {};
+                \node [sum, right of=input] (sum) {};
+                \node at ([xshift=-0.3cm]sum.center) {$+$};
+                \node at ([yshift=-0.3cm]sum.center) {$-$};
+
+                \node [block, right of=sum, node distance=2.5cm] (P) {Proportional};
+                \node [block, below of=P, node distance=2.5cm] (I) {Integral};
+                \node [block, above of=P, node distance=2.5cm] (D) {Derivative};
+
+                \node [sum, right of=P, node distance=3.5cm] (sumPID) {$+$};
+                \node [sum, right of=sumPID, node distance=2cm] (sumFF) {$+$};
+                \node [block, right of=sumFF, node distance=3cm] (plant) {Plant};
+                \node [output, right of=plant, node distance=3cm] (output) {};
+                \node [block, below of=plant, node distance=4cm] (sensor) {Sensor};
+
+                \node [block, above of=sumFF, node distance=3cm] (FF) {Static FF};
+
+                % PID Controller dashed box
+                \node [pidblock, fit=(P) (I) (D) (sumPID) (FF), label=above:PID Controller] {};
+
+                % Connections
+                \draw [draw,->] (input) -- node[name=setpoint,pos=-0.5] {Setpoint ($u$)} (sum);
+                \draw [->] (sum.east) -- ++(0.5,0) |- (P.west);
+                \draw [->] (sum.east) -- ++(0.5,0) |- (I.west);
+                \draw [->] (sum.east) -- ++(0.5,0) |- (D.west);
+
+                \draw [->] (P) -- (sumPID);
+                \draw [->] (I) -| (sumPID);
+                \draw [->] (D) -| (sumPID);
+
+                \draw [->] (sumPID) -- node {} (sumFF);
+                \draw [->] (sumFF) -- node {} (plant);
+                \draw [->] (plant) -- node [name=measure] {$Y$} (output);
+                \draw [->] (measure) |- (sensor);
+                \draw [->] (sensor) -| node[pos=0.9] {Measured Value} (sum); % Adjusted position here
+
+                % Static FF connection
+                \draw [->] (FF) -- (sumFF);
+
+            \end{tikzpicture}
+        }
+        \caption{PID Controller and Static Feedforward Control.}
+        \label{fig:_pid_ff}
+    \end{figure}
+    \item \textbf{Static Feedforward Control}: This type calculates a steady-state gain based on the relationship between the disturbance variable and the Process Variable. The calculated gain is then added directly to the controller output. While effective for steady disturbances, it does not account for dynamic changes in the process.
+          \begin{figure}[ht]
+              \centering
+              \resizebox{\linewidth}{!}{
+                  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+                      % Nodes
+                      \node [input, name=input] {};
+                      \node [sum, right of=input] (sum) {};
+                      \node at ([xshift=-0.3cm]sum.center) {$+$};
+                      \node at ([yshift=-0.3cm]sum.center) {$-$};
+
+                      \node [block, right of=sum, node distance=2.5cm] (P) {Proportional};
+                      \node [block, below of=P, node distance=2.5cm] (I) {Integral};
+                      \node [block, above of=P, node distance=2.5cm] (D) {Derivative};
+
+                      \node [sum, right of=P, node distance=3.5cm] (sumPID) {$+$};
+                      \node [sum, right of=sumPID, node distance=2cm] (sumFF) {$+$};
+                      \node [block, right of=sumFF, node distance=3cm] (plant) {Plant};
+                      \node [output, right of=plant, node distance=3cm] (output) {};
+                      \node [block, below of=plant, node distance=4cm] (sensor) {Sensor};
+
+                      \node [block, above of=sumFF, node distance=3.5cm] (FF) {Dynamic FF};
+
+                      % PID Controller dashed box
+                      \node [pidblock, fit=(P) (I) (D) (sumPID) (FF), label=above:PID Controller] {};
+
+                      % Connections
+                      \draw [draw,->] (input) -- node[name=setpoint,pos=-0.5] {Setpoint ($u$)} (sum);
+                      \draw [->] (sum.east) -- ++(0.5,0) |- (P.west);
+                      \draw [->] (sum.east) -- ++(0.5,0) |- (I.west);
+                      \draw [->] (sum.east) -- ++(0.5,0) |- (D.west);
+
+                      \draw [->] (P) -- (sumPID);
+                      \draw [->] (I) -| (sumPID);
+                      \draw [->] (D) -| (sumPID);
+
+                      \draw [->] (sumPID) -- node {} (sumFF);
+                      \draw [->] (sumFF) -- node {} (plant);
+                      \draw [->] (plant) -- node [name=measure] {$Y$} (output);
+                      \draw [->] (measure) |- (sensor);
+                      \draw [->] (sensor) -| node[pos=0.9] {Measured Value} (sum); % Adjusted position here
+
+                      % Dynamic FF connection
+                      \draw [->] (input) -- ++(0.6,0) |-  (FF);
+                      \draw [->] (FF) -- (sumFF);
+
+                  \end{tikzpicture}
+              }
+              \caption{PID Controller and Dynamic Feedforward Control.}
+              \label{fig:_pid_ff_dyn}
+          \end{figure}
+    \item \textbf{Dynamic Feedforward Control}: Dynamic Feedforward Control considers the dynamic response of the process to disturbances. It incorporates the time constant and dynamics of the disturbance to provide a more accurate compensation. This approach requires a model of the process dynamics or real-time measurement of the disturbance.
+\end{enumerate}
+
+\subsubsection{Benefits of Feedforward Control}
+
+\begin{itemize}
+    \item \textbf{Improved Disturbance Rejection}: By preemptively adjusting the controller output, Feedforward Control can significantly reduce deviations from the setpoint caused by disturbances.
+
+    \item \textbf{Enhanced Stability}: Minimizing the impact of disturbances helps maintain stability in the control loop, reducing oscillations and improving overall system performance.
+
+    \item \textbf{Efficiency}: Reducing the need for corrective action by the PID controller can extend equipment life and improve process efficiency.
+\end{itemize}
+
+In conclusion, while PID controllers excel in maintaining setpoints based on
+feedback from the Process Variable, integrating Feedforward Control can enhance
+their performance by mitigating the effects of disturbances. By combining both
+feedback and feedforward strategies, industrial processes can achieve more
+robust and responsive control.
+
+\subsection{Zeigler-Nichols method}
+The Ziegler--Nichols tuning method is a heuristic method for tuning a PID
+controller, developed by John G. Ziegler and Nathaniel B. Nichols
+\cite{ziegler-nichols}. It involves setting the integral (\( T_i \)) and
+derivative (\( T_d \)) gains to zero and gradually increasing the proportional
+gain (\( K_p \)) until stable oscillations occur at the ultimate gain (\( K_u
+\)) and oscillation period (\( T_u \)). The parameters for different types of
+controllers are set based on these values, as shown in Table
+\ref{tab:ziegler-nichols}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Ziegler--Nichols Method Parameters for PID Controllers}
+    \label{tab:ziegler-nichols}
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        Control Type         & \( K_p \)                  & \( T_i \)                  & \( T_d \)                   & \( K_i \)                              & \( K_d \)                      \\
+        \hline
+        P                    & \( 0.5 K_u \)              & -                          & -                           & -                                      & -                              \\
+        PI                   & \( 0.45 K_u \)             & \( 0.8 \overline{3} T_u \) & -                           & \( 0.54 \frac{K_u}{T_u} \)             & -                              \\
+        PD                   & \( 0.8 K_u \)              & -                          & \( 0.125 T_u \)             & -                                      & \( 0.10 \frac{K_u}{T_u} \)     \\
+        Classic PID          & \( 0.6 K_u \)              & \( 0.5 T_u \)              & \( 0.125 T_u \)             & \( 1.2 \frac{K_u}{T_u} \)              & \( 0.075 \frac{K_u}{T_u} \)    \\
+        Pessen Integral Rule & \( 0.7 K_u \)              & \( 0.4 T_u \)              & \( 0.15 T_u \)              & \( 1.75 \frac{K_u}{T_u} \)             & \( 0.105 \frac{K_u}{T_u} \)    \\
+        Some Overshoot       & \( 0.3 \overline{3} K_u \) & \( 0.5 T_u \)              & \( 0.3 \overline{3}{T_u} \) & \( 0.6 \overline{6} \frac{K_u}{T_u} \) & \( 0.1 \overline{1} K_u T_u \) \\
+        No Overshoot         & \( 0.2 K_u \)              & \( 0.5 T_u \)              & \( 0.3 \overline{3}{T_u} \) & \( 0.4 \frac{K_u}{T_u} \)              & \( 0.6 \overline{6} K_u T_u \) \\
+        \hline
+    \end{tabular}
+\end{table}
+
+The ultimate gain \( K_u \) is defined as \( 1/M \), where \( M \) is the
+amplitude ratio. The parameters \( K_i \) and \( K_d \) are derived from \( K_p
+\), \( T_i \), and \( T_d \).
