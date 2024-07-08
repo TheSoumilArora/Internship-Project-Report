@@ -34,9 +34,10 @@ jobs:
           path: . 
       - name: Move artifact
         run: mkdir -p github_deploy && mv main.pdf github_deploy/
-      - name: Deploy on orphan branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./github_deploy
-          force_orphan: true
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          allow_empty_commit: true
