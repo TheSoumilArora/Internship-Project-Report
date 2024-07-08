@@ -13,7 +13,7 @@ SVPWM utilizes eight basic voltage vectors, which are combinations of
 magnitudes and directions of the voltage vectors in the abc reference frame.
 These vectors are represented as $V_0$ through $V_7$ . Each vector corresponds
 to a unique combination of switching states for the three inverter legs (a, b,
-and c). Figure \ref{fig:combined} outline these basic voltage vectors.\\
+and c). Below is a table outlining these basic voltage vectors:
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
@@ -73,7 +73,7 @@ The vectors can be visualized in a hexagonal plane, where each active vector
 represents a specific direction and magnitude in the two-dimensional space of
 the voltage waveform. The zero vectors $V_0$ and $V_7$ do not contribute to the
 direction but help in controlling the overall voltage magnitude and maintaining
-the desired output voltage.\\
+the desired output voltage.
 
 Each vector corresponds to specific switching states of the inverter's power
 transistors. The switching states determine which transistors are turned on and
@@ -89,14 +89,14 @@ Given the desired voltage vector in the $\alpha\beta$ plane, the nearest active
 vectors are selected to approximate it. This selection is based on the angle
 and magnitude of the desired vector relative to the active vectors. The process
 involves determining the sector in which the reference voltage vector lies. The
-$\alpha\beta$ plane is divided into six sectors, each spanning 60 degrees.\\
+$\alpha\beta$ plane is divided into six sectors, each spanning 60 degrees.
 
 Once the sector is identified, the two adjacent active vectors defining this
 sector are selected. These vectors are chosen because they are the closest to
 the desired voltage vector and can best approximate its position. For example,
 if the desired voltage vector lies in the first sector, the active vectors
 $V_1$ and $V_2$ are selected. The reference vector is then synthesized by
-linearly combining these two active vectors and a zero vector.\\
+linearly combining these two active vectors and a zero vector.
 
 The zero vectors ($V_0$ and $V_7$) are used to balance the time intervals to
 ensure that the total duration of each switching period is maintained. This
@@ -194,7 +194,7 @@ Implementing a switching sequence that minimizes switching losses and ensures
 smooth transitions between vectors is crucial for the efficiency and
 performance of SVPWM. This sequence involves switching between the active and
 zero vectors in a manner that reduces the number of switching operations and
-distributes the switching events evenly across the phases.\\
+distributes the switching events evenly across the phases.
 
 The primary goal is to minimize the number of times the switches in the
 inverter change states, which helps in reducing switching losses. By doing so,
@@ -225,7 +225,7 @@ When the inverter bridge transitions through different active vectors, the
 switching sequence is designed such that only one of the half-bridges changes
 its state at any given time. This is achieved by arranging the active and zero
 vectors in a specific order, ensuring that the transitions involve only a
-single switch change per half-bridge.\\
+single switch change per half-bridge.
 
 To determine the optimal switching sequence, the following steps are taken:
 

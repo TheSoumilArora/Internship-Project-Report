@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-\usepackage[a4paper, width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[a4paper, width=180mm,top=10mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{blindtext}
 \usepackage{graphicx}
@@ -15,6 +15,7 @@
 \usepackage{pgf-umlcd}
 \usepackage{caption}
 \usepackage{subcaption}
+
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
 \usetikzlibrary{positioning, shapes.geometric, arrows,calc,arrows.meta}
 \graphicspath{{images/}}
@@ -80,15 +81,16 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} 
 \renewcommand{\cftchapfont}{\normalfont\bfseries}
 
-\newcommand{\name}{Shashank Agarwal}
-\newcommand{\faculty}{Dr.Loveleen Kaur Taneja}
-\newcommand{\industry}{Mr.Sarv Parteek Singh}
-\newcommand{\director}{Mr.M.S. Saini}
+\newcommand{\name}{Soumil Arora}
+\newcommand{\faculty}{Assistant Professor Muzaffar Imam}
+\newcommand{\industry}{Mr. Sarv Parteek Singh}
+\newcommand{\director}{Mr. M.S. Saini}
+\newcommand{\sid}{21105005}
 
 \begin{document}
 
 \input{titlepage}
-\setlength{\parindent}{0pt}
+
 \pagenumbering{roman}
 
 \titleformat{\chapter}[display]
@@ -104,7 +106,6 @@
 {\normalfont\LARGE\bfseries}{\thechapter.}{20pt}{\LARGE}
 
 \tableofcontents
-\listoffigures
 
 \clearpage
 \pagenumbering{arabic}
@@ -115,6 +116,8 @@
 \input{chapters/Introduction.tex}
 \chapter{Work}
 \input{chapters/Work.tex}
+\chapter{Review}
+\input{chapters/Review.tex}
 \chapter{Details of work}
 \input{chapters/Details.tex}
 \chapter{Conclusion and Future scope}

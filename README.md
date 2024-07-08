@@ -1,10 +1,10 @@
-# Internship Project Report: Space Vector Modulation
+# Internship Project Report: LLC Resonant Converter Design
 
-This repository contains the LaTeX files for the internship project report focusing on Space Vector Modulation (SVM). The project report documents the research, analysis, and findings related to Space Vector Modulation techniques.
+This repository contains the LaTeX files for the internship project report focusing on LLC Resonant Converter Design. The project report documents the research, analysis, and findings related to LLC Converter Design.
 
 ## Overview
 
-Space Vector Modulation is a technique used in the control of pulse-width modulated inverters to generate three-phase AC voltage waveforms. It is widely used in various applications such as motor control, power electronics, and renewable energy systems.
+LLC resonant converters are a power converter that uses a resonant circuit to store energy and provide a smooth output voltage. These converters utilize resonant circuits, consisting of inductors, capacitors, and switches, to regulate energy flow. They are often used in applications where a high-quality, ripple-free output voltage is required.
 
 ## Getting Started
 
