@@ -46,7 +46,8 @@ This needed to be done carefully to ensure that the testing was done properly an
 
 \subsection{Debugging Hardware Issues in the Circuit}
 Throughout the rest of the internship, I was involved in debugging the hardware issues in the circuit and ensuring that the circuit was working properly.
-Multiple issues arised during the testing phase which needed to be addressed and resolved to ensure that the circuit was working properly.
+Multiple issues (such as issue in the feedback signal, issue with the boosting of the voltage, correct mapping of status LEDs to the corresponding pins on the microcontroller) arised during the testing phase which needed to be addressed and resolved to ensure that the circuit was working properly.
+The biggest challenge was when we hooked up multiple LLCs in parallel to perform load sharing and we observed oscillications in the load shared. This was solved later by my analysis of the circuit.
 
 \section{Design - Calculation of LLC values}
 The next step was to design the LLC Converter and calculate the values of the components that would be used in the design. This involved the following steps:
