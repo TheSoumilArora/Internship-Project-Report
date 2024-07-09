@@ -1,0 +1,69 @@
+\contentsline {chapter}{\numberline {1}Summary}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Timeline}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}January}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Feburary}{1}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}March}{1}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}April}{1}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}May}{2}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}June}{2}{subsection.1.1.6}%
+\contentsline {chapter}{\numberline {2}Introduction}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Problem Statement}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Overview}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}LLC Converter}{3}{subsection.2.2.1}%
+\contentsline {subsubsection}{Switching Circuit}{3}{subsubsection*.4}%
+\contentsline {subsubsection}{Resonant Tank}{3}{subsubsection*.5}%
+\contentsline {subsubsection}{Rectifier Circuit}{4}{subsubsection*.6}%
+\contentsline {section}{\numberline {2.3}Challenges}{4}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Work}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Simulation}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Individual Sectional Simulation}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Probing Data for Analysis}{5}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Comparing Oscilloscope Data with Simulation Data}{5}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Hardware Testing}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Soldering of the Components}{6}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Preparing the Testing Jig of the LLC Converter}{6}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Debugging Hardware Issues in the Circuit}{6}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Design - Calculation of LLC values}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Suggestions in current design}{7}{section.3.4}%
+\contentsline {section}{\numberline {3.5}PCB Design}{7}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Review}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Company Review}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Project Review}{9}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Details of work}{10}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Simulation}{10}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Why Measure Phase Voltage?}{10}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Need for Conversion from Phase to Line Voltage}{10}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Why Simply Dividing by the Square Root of 3 is Insufficient}{11}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Derivation of the Transformations}{11}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Clarke transform}{12}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}What is Clarke Transform?}{12}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Derivation of the Clarke Transform Matrix}{13}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Park transform}{14}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}What is Park Transform?}{14}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Derivation of the Park Transform Matrix}{14}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}PID Controller}{15}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}What is PID Controller?}{15}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Feedforward Control}{16}{subsection.5.4.2}%
+\contentsline {subsubsection}{Why Use Feedforward Control?}{16}{subsubsection*.16}%
+\contentsline {subsubsection}{Types of Feedforward Control}{17}{subsubsection*.17}%
+\contentsline {subsubsection}{Benefits of Feedforward Control}{17}{subsubsection*.20}%
+\contentsline {subsection}{\numberline {5.4.3}Zeigler-Nichols method}{18}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Phase Lock Loop (PLL)}{18}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Working of Three-Phase PLL}{19}{subsection.5.5.1}%
+\contentsline {subsubsection}{Clarke Transformation}{19}{subsubsection*.23}%
+\contentsline {subsubsection}{Park Transformation}{19}{subsubsection*.24}%
+\contentsline {subsubsection}{PI Controller}{19}{subsubsection*.25}%
+\contentsline {subsubsection}{Integrator}{19}{subsubsection*.26}%
+\contentsline {subsubsection}{Summing Junction and Feedforward Path}{19}{subsubsection*.27}%
+\contentsline {subsubsection}{Output}{20}{subsubsection*.28}%
+\contentsline {section}{\numberline {5.6}Space Vector Modulation}{20}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Basic Voltage Vectors}{20}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Vector Selection}{21}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Synthesis of Output Voltage}{21}{subsection.5.6.3}%
+\contentsline {subsubsection}{Determining the Time Intervals}{21}{subsubsection*.30}%
+\contentsline {subsubsection}{Switching Sequence}{22}{subsubsection*.32}%
+\contentsline {subsubsection}{Gate Pulse Generation}{22}{subsubsection*.34}%
+\contentsline {section}{\numberline {5.7}Matlab/SIMULINK function blocks}{23}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Scope}{26}{section.6.2}%
