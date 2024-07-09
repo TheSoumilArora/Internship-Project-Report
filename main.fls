@@ -384,18 +384,18 @@ INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
 INPUT ./chapters/Work.tex
 INPUT ./chapters/Work.tex
 INPUT chapters/Work.tex
-INPUT ./images/Whole Simulation.png
-INPUT ./images/Whole Simulation.png
-INPUT ./images/Whole Simulation.png
-INPUT ./images/Whole Simulation.png
-INPUT ./images/Control flow.png
-INPUT ./images/Control flow.png
-INPUT ./images/Control flow.png
-INPUT ./images/Control flow.png
-INPUT ./images/Power System.png
-INPUT ./images/Power System.png
-INPUT ./images/Power System.png
-INPUT ./images/Power System.png
+INPUT ./images/overall_circuit.png
+INPUT ./images/overall_circuit.png
+INPUT ./images/overall_circuit.png
+INPUT ./images/overall_circuit.png
+INPUT ./images/sectional_output.png
+INPUT ./images/sectional_output.png
+INPUT ./images/sectional_output.png
+INPUT ./images/sectional_output.png
+INPUT ./images/pcb.png
+INPUT ./images/pcb.png
+INPUT ./images/pcb.png
+INPUT ./images/pcb.png
 INPUT ./chapters/Review.tex
 INPUT ./chapters/Review.tex
 INPUT chapters/Review.tex
