@@ -376,6 +376,11 @@ INPUT ./images/LLC_converter.png
 INPUT ./images/LLC_converter.png
 INPUT ./images/LLC_converter.png
 INPUT ./images/LLC_converter.png
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT /opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
+INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
 INPUT ./chapters/Work.tex
 INPUT ./chapters/Work.tex
 INPUT chapters/Work.tex
@@ -391,11 +396,6 @@ INPUT ./images/Power System.png
 INPUT ./images/Power System.png
 INPUT ./images/Power System.png
 INPUT ./images/Power System.png
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-INPUT /opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/adobe/times/ptmr8c.tfm
-INPUT /opt/texlive/texdir/texmf-dist/fonts/vf/adobe/times/ptmr8c.vf
 INPUT ./chapters/Review.tex
 INPUT ./chapters/Review.tex
 INPUT chapters/Review.tex
