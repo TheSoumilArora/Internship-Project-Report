@@ -1,0 +1,18 @@
+# LaTeX build files
+*.aux
+*.log
+*.synctex.gz
+*.pdf
+*.dvi
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.bbl
+*.blg
+*.lot
+*.lof
+*.gz
+
+#Junk files
+*.DS_Store
