@@ -4,13 +4,15 @@ My team at Statcon Electronics India Ltd has been focusing on enhancing the
 efficiency and performance of Switched Mode Power Supplies. Presently, most
 SMPS utilize switching of MOSFETs at high frequencies to generate an alternating
 high frequency signal which is then passed through a rectifier and filtered using
-capacitors.
-
+capacitors. We use LLC Based Resonant Converters which have higher efficiency, and
+lower output voltage ripple than traditional SMPS. The aim of this project is to
+understand the working of such a converter and design one as well
 
 \section{Overview}
 
-\subsection{Traditional Rectifier}
-This is \ref{fig:llc_converter}
+\subsection{LLC Converter}
+Figure \ref{fig:llc_converter} is a schematic of a basic LLC converter. The LLC has the
+following components:
 
 \begin{figure}[h]
     \centering
@@ -21,22 +23,23 @@ This is \ref{fig:llc_converter}
 
 \noindent
 
-
-\subsection{Vector Control}
-
-
-\subsection{Space Vector Modulation}
-
+\subsubsection{Switching Circuit}
+The switching circuit alternately switches the MOSFETs ON and OFF (full-bridge or half-bridge), generating a sort of square wave after the switching circuit, and before the resonant tank circuit.
+\subsubsection{Resonant Tank}
+The resonant tank circuit filters the higher-order harmonics and generates a sinusoidal signal of the fundamental frequency of the tank circuit to be fed into the primary side of the transformer.
+\subsubsection{Rectifier Circuit}
+A bridge rectifier (full-bridge or half-bridge) followed by the output capacitor rectifies the alternating voltage produced at the transformer and converts it into stable DC voltage.
 
 \section{Challenges}
-I faced many challenges in developing a Active front-end converter. Firstly,
-distinguishing between Sinusoidal Pulse Width Modulation (SPWM) and Space
-Vector Pulse Width Modulation (SVPWM) posed confusion due to their perceived
-similarity in operational principles. Secondly, reconciling the non-zero
-resultant vector in SVPWM with the traditional understanding of three-phase
-systems, where the vector sum equals zero, required conceptual clarification to
-ensure accurate system design and analysis. Another challenge was comprehending
-how rectification and regeneration can occur through the same IGBT bridge, as
-it involved bidirectional power flow management. Additionally, not knowing how
-to write code in MATLAB was another challenge, but learning it opened up new
-possibilities for simulating and analyzing our AFE converter designs.
+The challenges I faced in simulating and designing a LLC Based Resonant converter include:
+\begin{itemize}
+    \item \textbf{Modeling the LLC converter}: Understanding the complex interactions between the switching circuit, resonant tank, and rectifier circuit and accurately modeling their behavior in simulation.
+
+    \item \textbf{Component selection}: Choosing the appropriate resonant tank components to ensure optimal performance and efficiency.
+
+    \item \textbf{Efficiency optimization}: Optimizing the converter design to maximize efficiency and minimize power losses.
+
+    \item \textbf{Cost considerations}: Balancing the performance requirements with cost constraints to design a converter that is both efficient and cost-effective.
+
+    \item \textbf{Validation and testing}: Verifying the performance of the designed converter through simulation and experimental testing to ensure it meets the desired specifications.
+\end{itemize}
