@@ -62,14 +62,20 @@ The next step was to design the LLC Converter and calculate the values of the co
     \item \textbf{Documenting the design}: Documenting the design of the converter to ensure that it can be replicated in the future.
 \end{itemize}
 
+\section{Frequency-Gain Curve Plotter for LLC Converters}
+Based on the literature that I read during the course of my internship, I made a generalised Frequency-Gain Curve Plotter for the LLC Converter. This plotter would help in understanding the behavior of the converter and would be useful in designing a converter.
+\noindent
+All we need to do is input our requirements (such as minimum and maximum output voltage, desired resonant frequency, output power) and one or two variables that we choose according to our design and we would get the Frequency-Gain curve for the converter, basically the response of the LLC tank (Gain) for various switching frequencies and then we can tune out the values by optimising the graph as per our requirements.
+
 \section{Suggestions in current design}
-Based on the simulation and analysis of the existing circuit, some changes such as change in the transformer core etc. were suggested in the design to improve the performance and efficiency of the converter.
+Based on the simulation and analysis of the existing circuit, some changes such as change in the transformer core etc. were suggested in the design to improve the performance and efficiency of the converter. These changes arised by noting that the maximum heat is generated in the transformer only in the current design, so we can improve the efficiency of the current converter as well by changing the transformer core.
+The suggested core was PQ40/40 core with PC47 material which has the required power handling capacity, is smaller in terms of footprint, lower EMI noise, and has better efficiency for our operating frequencies. Morever, it is Rs. 70 cheaper than the current core (so if we sell 20,000 units of this power supply, we can save Rs. 14,00,000).
 
 \section{PCB Design}
-\begin{figure}[ht]
+The last part of my internship included designing the PCB (Figure \ref*{fig:pcb_out}) of some other project (RMS - Remote Monitoring System). I used Altium Designer for the same.
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{pcb.png}
     \caption{PCB}
     \label{fig:pcb_out}
 \end{figure}
-The last part of my internship included designing the PCB (Figure \ref*{fig:pcb_out}) of some other project (RMS - Remote Monitoring System). I used Altium Designer for the same.

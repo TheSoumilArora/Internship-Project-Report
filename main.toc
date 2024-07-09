@@ -24,8 +24,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Preparing the Testing Jig of the LLC Converter}{6}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Debugging Hardware Issues in the Circuit}{6}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}Design - Calculation of LLC values}{7}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Suggestions in current design}{7}{section.3.4}%
-\contentsline {section}{\numberline {3.5}PCB Design}{7}{section.3.5}%
+\contentsline {section}{\numberline {3.4}Frequency-Gain Curve Plotter for LLC Converters}{7}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Suggestions in current design}{7}{section.3.5}%
+\contentsline {section}{\numberline {3.6}PCB Design}{8}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Review}{9}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Company Review}{9}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Project Review}{9}{section.4.2}%
@@ -36,15 +37,15 @@
 \contentsline {section}{\numberline {5.2}Simulation}{11}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Sectional Analysis}{11}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Probing Actual Data}{12}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Comparitive Analysis of Simulated Data with Actual Data}{12}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Preparation of Testing Jig and Testing Procedure}{12}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Resonant Converters}{12}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Types of Converters and Why LLC}{12}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Hardware Testing}{13}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Resonant Converters}{13}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.2.3}Comparitive Analysis of Simulated Data with Actual Data}{13}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Preparation of Testing Jig and Testing Procedure}{13}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Resonant Converters}{13}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Types of Converters and Why LLC}{13}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Hardware Testing}{14}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Resonant Converters}{14}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Types of Converters and Why LLC}{14}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Design of LLC Converter as per 48V - 1.8kW Specification}{14}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Resonant Converters}{14}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.5}Design of LLC Converter as per 48V - 1.8kW Specification}{15}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Resonant Converters}{15}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}Types of Converters and Why LLC}{15}{subsection.5.5.2}%
 \contentsline {section}{\numberline {5.6}Calculation of Transformer for 110V - 3kW Specification}{16}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Resonant Converters}{16}{subsection.5.6.1}%
