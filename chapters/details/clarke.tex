@@ -1,9 +1,3 @@
-The alpha-beta transform, also known as the Clarke transform, is a fundamental
-mathematical tool used to simplify the analysis of three-phase electric
-machines. It is named after Edith Clarke, who published papers in 1937 and 1938
-introducing modified calculation methods for handling unbalanced three-phase
-problems~\cite{E. Clarke}.
-
 \subsection{What is Clarke Transform?}
 \begin{figure}[ht]
     \centering
@@ -38,16 +32,6 @@ problems~\cite{E. Clarke}.
     \label{fig:Clarke Frame of reference}
 \end{figure}
 
-E. Clarke developed the method for transforming stationary circuits into a
-stationary reference frame. In Clarke’s transformation, the two-phase
-stationary variables are represented as $\alpha$ and $\beta$, with the
-$\alpha$-axis and $\beta$-axis being orthogonal to each other~\cite{DSP-Based
-    Electromechanical Motion Control}.This transformation simplifies the analysis
-of three-phase electrical systems by projecting the original quantities onto a
-stationary reference frame. It decomposes the three-phase variables into two
-orthogonal components: alpha ($\alpha$) and beta ($\beta$), which are aligned
-with the stationary reference axes, called the Clarke reference frame. The
-transform matrix is given by:
 \begin{equation*}
     T_{\alpha\beta0} = \frac{2}{3}
     \begin{bmatrix}
@@ -60,7 +44,7 @@ transform matrix is given by:
 
 \subsection{Derivation of the Clarke Transform Matrix}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
         \centering
@@ -77,14 +61,6 @@ transform matrix is given by:
     \caption{Clarke transformation and its derivation}
     \label{fig:combined_Clarke}
 \end{figure}
-
-
-To derive the Clarke transformation, we resolve the three-phase quantities \(
-V_a, V_b, V_c \) along the \(\alpha\) and \(\beta\) axes. The transformed
-quantities \( V_\alpha \) and \( V_\beta \) are simplified according to Figure
-\ref{fig:Clarke transformation Derivation}. The normalization term \(
-\frac{2}{3} \) ensures that the magnitudes of the quantities in the Clarke
-frame match those of the three-phase frame.
 
 \begin{equation*}
     V_\alpha = \frac{2}{3}(V_a - \frac{1}{2} V_b - \frac{1}{2} V_c)

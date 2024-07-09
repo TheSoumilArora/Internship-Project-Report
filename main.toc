@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.1.1}January}{1}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Feburary}{1}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}March}{1}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}April}{2}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.4}April}{1}{subsection.1.1.4}%
 \contentsline {subsection}{\numberline {1.1.5}May}{2}{subsection.1.1.5}%
 \contentsline {subsection}{\numberline {1.1.6}June}{2}{subsection.1.1.6}%
 \contentsline {chapter}{\numberline {2}Introduction}{3}{chapter.2}%
@@ -43,34 +43,34 @@
 \contentsline {subsection}{\numberline {5.1.3}Why Simply Dividing by the Square Root of 3 is Insufficient}{10}{subsection.5.1.3}%
 \contentsline {subsection}{\numberline {5.1.4}Derivation of the Transformations}{10}{subsection.5.1.4}%
 \contentsline {section}{\numberline {5.2}Clarke transform}{11}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}What is Clarke Transform?}{12}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}What is Clarke Transform?}{11}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Derivation of the Clarke Transform Matrix}{12}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}Park transform}{13}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}What is Park Transform?}{13}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Derivation of the Park Transform Matrix}{14}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}PID Controller}{15}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}What is PID Controller?}{16}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Feedforward Control}{16}{subsection.5.4.2}%
-\contentsline {subsubsection}{Why Use Feedforward Control?}{16}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {5.3.2}Derivation of the Park Transform Matrix}{13}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}PID Controller}{14}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}What is PID Controller?}{14}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Feedforward Control}{15}{subsection.5.4.2}%
+\contentsline {subsubsection}{Why Use Feedforward Control?}{15}{subsubsection*.21}%
 \contentsline {subsubsection}{Types of Feedforward Control}{16}{subsubsection*.22}%
-\contentsline {subsubsection}{Benefits of Feedforward Control}{17}{subsubsection*.25}%
+\contentsline {subsubsection}{Benefits of Feedforward Control}{16}{subsubsection*.25}%
 \contentsline {subsection}{\numberline {5.4.3}Zeigler-Nichols method}{17}{subsection.5.4.3}%
 \contentsline {section}{\numberline {5.5}Phase Lock Loop (PLL)}{17}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Working of Three-Phase PLL}{18}{subsection.5.5.1}%
 \contentsline {subsubsection}{Clarke Transformation}{18}{subsubsection*.28}%
-\contentsline {subsubsection}{Park Transformation}{19}{subsubsection*.29}%
-\contentsline {subsubsection}{PI Controller}{19}{subsubsection*.30}%
-\contentsline {subsubsection}{Integrator}{19}{subsubsection*.31}%
-\contentsline {subsubsection}{Summing Junction and Feedforward Path}{19}{subsubsection*.32}%
+\contentsline {subsubsection}{Park Transformation}{18}{subsubsection*.29}%
+\contentsline {subsubsection}{PI Controller}{18}{subsubsection*.30}%
+\contentsline {subsubsection}{Integrator}{18}{subsubsection*.31}%
+\contentsline {subsubsection}{Summing Junction and Feedforward Path}{18}{subsubsection*.32}%
 \contentsline {subsubsection}{Output}{19}{subsubsection*.33}%
-\contentsline {section}{\numberline {5.6}Space Vector Modulation}{20}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Basic Voltage Vectors}{20}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Vector Selection}{21}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Synthesis of Output Voltage}{21}{subsection.5.6.3}%
-\contentsline {subsubsection}{Determining the Time Intervals}{21}{subsubsection*.35}%
-\contentsline {subsubsection}{Switching Sequence}{22}{subsubsection*.37}%
-\contentsline {subsubsection}{Gate Pulse Generation}{22}{subsubsection*.39}%
-\contentsline {section}{\numberline {5.7}Matlab/SIMULINK function blocks}{23}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{25}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Scope}{25}{section.6.2}%
+\contentsline {section}{\numberline {5.6}Space Vector Modulation}{19}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Basic Voltage Vectors}{19}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Vector Selection}{20}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Synthesis of Output Voltage}{20}{subsection.5.6.3}%
+\contentsline {subsubsection}{Determining the Time Intervals}{20}{subsubsection*.35}%
+\contentsline {subsubsection}{Switching Sequence}{21}{subsubsection*.37}%
+\contentsline {subsubsection}{Gate Pulse Generation}{21}{subsubsection*.39}%
+\contentsline {section}{\numberline {5.7}Matlab/SIMULINK function blocks}{22}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{24}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Scope}{24}{section.6.2}%

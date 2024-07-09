@@ -1,9 +1,3 @@
-The Proportional Integral Derivative (PID) Controller\cite{pid-wikipedia} is
-the most widely used control technique in industry. The popularity of PID
-Controller because of their robust performance in a wide range of operating
-condition and its simple functionality. Industrial processes are subjected to
-variation in parameters and parameters perturbations.
-
 \begin{figure}[ht]
     \centering
     \resizebox{\linewidth}{!}{
@@ -85,7 +79,7 @@ lead to deviations from the setpoint, requiring the PID controller to react and
 correct the error. However, by the time the disturbance affects the Process
 Variable, some amount of error may have already occurred.\\
 
-Feedforward Control\cite{feedforward-wikipedia} addresses this issue by using a
+Feedforward addresses this issue by using a
 model or direct measurement of the disturbance to predict its effect on the
 Process Variable. This prediction is used to generate a feedforward signal that
 is added to the PID controller's output. By doing so, the controller
@@ -218,13 +212,7 @@ robust and responsive control.
 
 \subsection{Zeigler-Nichols method}
 The Ziegler--Nichols tuning method is a heuristic method for tuning a PID
-controller, developed by John G. Ziegler and Nathaniel B. Nichols
-\cite{ziegler-nichols}. It involves setting the integral (\( T_i \)) and
-derivative (\( T_d \)) gains to zero and gradually increasing the proportional
-gain (\( K_p \)) until stable oscillations occur at the ultimate gain (\( K_u
-\)) and oscillation period (\( T_u \)). The parameters for different types of
-controllers are set based on these values, as shown in Table
-\ref{tab:ziegler-nichols}.
+
 
 \begin{table}[ht]
     \centering

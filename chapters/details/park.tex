@@ -1,11 +1,3 @@
-The Park transform, also known as the \( dq \) transformation, is another
-fundamental mathematical tool used in the analysis of three-phase electric
-machines.In the late 1920s, R.H. Park\cite{R. H. Park} introduced a new
-approach to electric machine analysis. He formulated a change of variables
-which replaced variables such as voltages, currents, and flux linkages
-associated with fictitious windings rotating with the rotor. He referred the
-stator and rotor variables to a reference frame fixed on the rotor. From the
-rotor point of view, all the variables can be observed as constant values
 \subsection{What is Park Transform?}
 \begin{figure}[ht]
     \centering
@@ -32,13 +24,7 @@ rotor point of view, all the variables can be observed as constant values
     \caption{Park Frame of reference}
     \label{Park Frame of reference}
 \end{figure}
-The Park transform shifts the perspective from the traditional stationary
-reference frame to a rotating reference frame that moves with the rotor. This
-transformation effectively decouples the complex interactions between variables
-such as voltages, currents, and flux linkages that occur in three-phase
-systems. By aligning with the rotor's magnetic field, the transform separates
-these variables into two orthogonal components: \( d \) (direct) and \( q \)
-(quadrature). Figure:\ref{fig:Park Transform}
+
 
 In practical terms, within the \( dq \) frame, \( d \) represents the component
 aligned with the rotor flux (direct axis), while \( q \) represents the
@@ -46,7 +32,7 @@ component perpendicular to the rotor flux (quadrature axis). This separation
 facilitates independent control of the torque-producing and magnetizing
 currents in field-oriented control strategies, essential for optimizing the
 performance of electric machines.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{park-clarke.png}
     \caption{Park Transform}

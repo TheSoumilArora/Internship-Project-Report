@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.1)  8 JUL 2024 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.1)  9 JUL 2024 03:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1026,18 +1026,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--12
 
  []
 
-)
+
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.115 \chapter
-              {Introduction} [1
+l.47 \subsection{May}
+                      [1
 
 
-]
+])
 
 [2]
 Chapter 2.
@@ -1066,10 +1066,6 @@ File: images/Control flow.png Graphic file (type png)
 <use images/Control flow.png>
 Package pdftex.def Info: images/Control flow.png  used on input line 20.
 (pdftex.def)             Requested size: 512.1496pt x 288.0824pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/Power System.png, id=339, 1927.2pt x 1084.05pt>
 File: images/Power System.png Graphic file (type png)
 <use images/Power System.png>
@@ -1080,11 +1076,9 @@ Package pdftex.def Info: images/Power System.png  used on input line 45.
 [5
 
  <./images/Whole Simulation.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
 5.
+
 (/opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
@@ -1118,41 +1112,41 @@ Package pdftex.def Info: images/Line_Voltages.png  used on input line 15.
 )>]
 
 [10]) (./chapters/details/clarke.tex
-
-[11]
-<images/Clarke-transformation-coordinates.png, id=396, 853.1875pt x 604.2575pt>
+<images/Clarke-transformation-coordinates.png, id=389, 853.1875pt x 604.2575pt>
 
 File: images/Clarke-transformation-coordinates.png Graphic file (type png)
 <use images/Clarke-transformation-coordinates.png>
 Package pdftex.def Info: images/Clarke-transformation-coordinates.png  used on 
-input line 67.
+input line 51.
 (pdftex.def)             Requested size: 256.0748pt x 181.36163pt.
-<images/clarkederivation.png, id=397, 758.835pt x 586.19pt>
+<images/clarkederivation.png, id=390, 758.835pt x 586.19pt>
 File: images/clarkederivation.png Graphic file (type png)
 <use images/clarkederivation.png>
-Package pdftex.def Info: images/clarkederivation.png  used on input line 73.
+Package pdftex.def Info: images/clarkederivation.png  used on input line 57.
 (pdftex.def)             Requested size: 256.0748pt x 197.81717pt.
 
 
+[11]
+
 [12 <./images/Clarke-transformation-coordinates.png> <./images/clarkederivation
 .png>]) (./chapters/details/park.tex
-<images/park-clarke.png, id=410, 625.58719pt x 432.11438pt>
+<images/park-clarke.png, id=403, 625.58719pt x 432.11438pt>
 File: images/park-clarke.png Graphic file (type png)
 <use images/park-clarke.png>
-Package pdftex.def Info: images/park-clarke.png  used on input line 51.
+Package pdftex.def Info: images/park-clarke.png  used on input line 37.
 (pdftex.def)             Requested size: 307.29288pt x 212.26537pt.
 
 
-[13]
+[13]) (./chapters/details/pid.tex
 
-[14 <./images/park-clarke.png>]) (./chapters/details/pid.tex
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 81--87
+[14 <./images/park-clarke.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 75--81
 
  []
 
 
+
+[15]
 
 [16]) (./chapters/details/pll.tex
 
@@ -1165,44 +1159,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--87
 [20]
 
 [21]
-
-[22]
-<images/sequence.png, id=492, 427.5975pt x 474.27188pt>
+<images/sequence.png, id=472, 427.5975pt x 474.27188pt>
 File: images/sequence.png Graphic file (type png)
 <use images/sequence.png>
 Package pdftex.def Info: images/sequence.png  used on input line 240.
 (pdftex.def)             Requested size: 512.1496pt x 568.09578pt.
 ) (./chapters/details/matlabfunction.tex))
 
-[23]
+[22]
 
-[24 <./images/sequence.png>]
+[23 <./images/sequence.png>]
 Chapter 6.
 (./chapters/Conclusion.tex)
 
+[24
+
+] (./chapters/References.tex)
+
 [25
-
-] (./chapters/References.tex
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-.
-
-(/opt/texlive/texdir/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Underfull \hbox (badness 1062) in paragraph at lines 5--6
-[]\OT1/ptm/m/n/12 DSP-Based Elec-trome-chan-i-cal Mo-tion Con-trol. [][]$\OT1/p
-cr/m/n/12 httpas : / / kaliasgoldmedal . yolasite .
- []
-
-
-Underfull \hbox (badness 2903) in paragraph at lines 11--12
-[]\OT1/ptm/m/n/12 Proportional{integral{derivative con-troller. (2024, June 27)
-. In Wikipedia. Re-trieved July 6,
- []
-
-)
-
-[26
 
 ] (./main.aux)
  ***********
@@ -1213,13 +1187,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3B7FC38D3070420858F6CFD138A07F89;9067.
  ) 
 Here is how much of TeX's memory you used:
- 28225 strings out of 473584
- 541598 string characters out of 5730347
- 1955905 words of memory out of 5000000
- 50472 multiletter control sequences out of 15000+600000
- 576564 words of font info for 72 fonts, out of 8000000 for 9000
+ 28173 strings out of 473584
+ 540717 string characters out of 5730347
+ 1954905 words of memory out of 5000000
+ 50432 multiletter control sequences out of 15000+600000
+ 576049 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,93p,485b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,93p,508b,1051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></o
 pt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texlive/
@@ -1229,13 +1203,12 @@ f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/texlive/texdir/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/texdir/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr8.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/urw/courier
-/ucrr8a.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-opt/texlive/texdir/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (31 pages, 1254174 bytes).
+c/amsfonts/cm/cmsy8.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (30 pages, 1234093 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 529 compressed objects within 6 object streams
- 139 named destinations out of 1000 (max. 500000)
+ 576 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 132 named destinations out of 1000 (max. 500000)
  516 words of extra memory for PDF output out of 10000 (max. 10000000)
 
