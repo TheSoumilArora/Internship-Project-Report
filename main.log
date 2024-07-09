@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.1)  9 JUL 2024 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.1)  9 JUL 2024 18:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,6 +925,18 @@ LaTeX Warning: Label `fig:basic3' multiply defined.
 
 LaTeX Warning: Label `fig:basic4' multiply defined.
 
+
+LaTeX Warning: Label `fig:basic1' multiply defined.
+
+
+LaTeX Warning: Label `fig:basic2' multiply defined.
+
+
+LaTeX Warning: Label `fig:basic3' multiply defined.
+
+
+LaTeX Warning: Label `fig:basic4' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1027,7 +1039,7 @@ Package hyperref Info: Link coloring ON on input line 91.
 \openout4 = `main.out'.
 
  (./titlepage.tex
-<images/university.png, id=228, 137.01187pt x 136.25906pt>
+<images/university.png, id=240, 137.01187pt x 136.25906pt>
 File: images/university.png Graphic file (type png)
 <use images/university.png>
 Package pdftex.def Info: images/university.png  used on input line 5.
@@ -1112,7 +1124,7 @@ l.47 \subsection{May}
 [2]
 Chapter 2.
 (./chapters/Introduction.tex
-<images/LLC_converter.png, id=320, 968.61874pt x 351.3125pt>
+<images/LLC_converter.png, id=336, 968.61874pt x 351.3125pt>
 File: images/LLC_converter.png Graphic file (type png)
 <use images/LLC_converter.png>
 Package pdftex.def Info: images/LLC_converter.png  used on input line 19.
@@ -1132,12 +1144,12 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [4]
 Chapter 3.
 (./chapters/Work.tex
-<images/overall_circuit.png, id=335, 1445.4pt x 418.56375pt>
+<images/overall_circuit.png, id=350, 1445.4pt x 418.56375pt>
 File: images/overall_circuit.png Graphic file (type png)
 <use images/overall_circuit.png>
 Package pdftex.def Info: images/overall_circuit.png  used on input line 4.
 (pdftex.def)             Requested size: 512.1496pt x 148.30695pt.
-<images/sectional_output.png, id=337, 795.97375pt x 387.4475pt>
+<images/sectional_output.png, id=352, 795.97375pt x 387.4475pt>
 File: images/sectional_output.png Graphic file (type png)
 <use images/sectional_output.png>
 Package pdftex.def Info: images/sectional_output.png  used on input line 27.
@@ -1154,7 +1166,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
  <./images/overall_circuit.png>]
 
 [6 <./images/sectional_output.png>]
-<images/pcb.png, id=350, 3307.35625pt x 2559.5625pt>
+<images/pcb.png, id=365, 3307.35625pt x 2559.5625pt>
 File: images/pcb.png Graphic file (type png)
 <use images/pcb.png>
 Package pdftex.def Info: images/pcb.png  used on input line 78.
@@ -1172,17 +1184,17 @@ Chapter 4.
 ]
 Chapter 5.
 (./chapters/Details.tex (./chapters/details/basics_llc.tex
-<images/basic1.png, id=366, 409.53pt x 261.97874pt>
+<images/basic1.png, id=381, 409.53pt x 261.97874pt>
 File: images/basic1.png Graphic file (type png)
 <use images/basic1.png>
 Package pdftex.def Info: images/basic1.png  used on input line 13.
 (pdftex.def)             Requested size: 153.64644pt x 98.28975pt.
-<images/basic2.png, id=367, 448.67625pt x 257.96375pt>
+<images/basic2.png, id=382, 448.67625pt x 257.96375pt>
 File: images/basic2.png Graphic file (type png)
 <use images/basic2.png>
 Package pdftex.def Info: images/basic2.png  used on input line 22.
 (pdftex.def)             Requested size: 153.64644pt x 88.33629pt.
-<images/basic3.png, id=368, 471.7625pt x 304.13625pt>
+<images/basic3.png, id=383, 471.7625pt x 304.13625pt>
 File: images/basic3.png Graphic file (type png)
 <use images/basic3.png>
 Package pdftex.def Info: images/basic3.png  used on input line 30.
@@ -1192,7 +1204,7 @@ Package pdftex.def Info: images/basic3.png  used on input line 30.
 [10
 
  <./images/basic1.png> <./images/basic2.png>]
-<images/basic4.png, id=377, 639.38875pt x 292.09125pt>
+<images/basic4.png, id=392, 639.38875pt x 292.09125pt>
 File: images/basic4.png Graphic file (type png)
 <use images/basic4.png>
 Package pdftex.def Info: images/basic4.png  used on input line 38.
@@ -1203,7 +1215,7 @@ File: images/overall_circuit.png Graphic file (type png)
 <use images/overall_circuit.png>
 Package pdftex.def Info: images/overall_circuit.png  used on input line 3.
 (pdftex.def)             Requested size: 512.1496pt x 148.30695pt.
-<images/lt_circuit.png, id=378, 1137.24875pt x 390.45876pt>
+<images/lt_circuit.png, id=393, 1137.24875pt x 390.45876pt>
 File: images/lt_circuit.png Graphic file (type png)
 <use images/lt_circuit.png>
 Package pdftex.def Info: images/lt_circuit.png  used on input line 14.
@@ -1220,7 +1232,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
-<images/oscilloscope_probe1.jpg, id=388, 3854.4pt x 2168.1pt>
+<images/oscilloscope_probe1.jpg, id=403, 3854.4pt x 2168.1pt>
 File: images/oscilloscope_probe1.jpg Graphic file (type jpg)
 <use images/oscilloscope_probe1.jpg>
 Package pdftex.def Info: images/oscilloscope_probe1.jpg  used on input line 28.
@@ -1228,8 +1240,13 @@ Package pdftex.def Info: images/oscilloscope_probe1.jpg  used on input line 28.
 (pdftex.def)             Requested size: 512.1496pt x 288.08241pt.
 File: images/sectional_output.png Graphic file (type png)
 <use images/sectional_output.png>
-Package pdftex.def Info: images/sectional_output.png  used on input line 39.
+Package pdftex.def Info: images/sectional_output.png  used on input line 41.
 (pdftex.def)             Requested size: 512.1496pt x 249.30165pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--44
+
+ []
+
 
 
 [12 <./images/lt_circuit.png> <./images/oscilloscope_probe1.jpg>])
@@ -1246,13 +1263,16 @@ File: images/basic3.png Graphic file (type png)
 <use images/basic3.png>
 Package pdftex.def Info: images/basic3.png  used on input line 29.
 (pdftex.def)             Requested size: 153.64644pt x 99.05194pt.
+
+
+[13]
 File: images/basic4.png Graphic file (type png)
 <use images/basic4.png>
 Package pdftex.def Info: images/basic4.png  used on input line 37.
 (pdftex.def)             Requested size: 153.64644pt x 70.188pt.
+) (./chapters/details/hardware_testing.tex
 
-
-[13]) (./chapters/details/hardware_testing.tex
+[14]
 File: images/basic1.png Graphic file (type png)
 <use images/basic1.png>
 Package pdftex.def Info: images/basic1.png  used on input line 13.
@@ -1269,9 +1289,9 @@ File: images/basic4.png Graphic file (type png)
 <use images/basic4.png>
 Package pdftex.def Info: images/basic4.png  used on input line 37.
 (pdftex.def)             Requested size: 153.64644pt x 70.188pt.
-)
+) (./chapters/details/48V-1-8kW.tex
 
-[14] (./chapters/details/48V-1-8kW.tex
+[15]
 File: images/basic1.png Graphic file (type png)
 <use images/basic1.png>
 Package pdftex.def Info: images/basic1.png  used on input line 13.
@@ -1288,9 +1308,9 @@ File: images/basic4.png Graphic file (type png)
 <use images/basic4.png>
 Package pdftex.def Info: images/basic4.png  used on input line 37.
 (pdftex.def)             Requested size: 153.64644pt x 70.188pt.
-)
+) (./chapters/details/110V-3kW.tex
 
-[15] (./chapters/details/110V-3kW.tex
+[16]
 File: images/basic1.png Graphic file (type png)
 <use images/basic1.png>
 Package pdftex.def Info: images/basic1.png  used on input line 13.
@@ -1307,9 +1327,28 @@ File: images/basic4.png Graphic file (type png)
 <use images/basic4.png>
 Package pdftex.def Info: images/basic4.png  used on input line 37.
 (pdftex.def)             Requested size: 153.64644pt x 70.188pt.
-)
+) (./chapters/details/f-gain_curve.tex
 
-[16] (./chapters/details/PCB.tex
+[17]
+File: images/basic1.png Graphic file (type png)
+<use images/basic1.png>
+Package pdftex.def Info: images/basic1.png  used on input line 13.
+(pdftex.def)             Requested size: 153.64644pt x 98.28975pt.
+File: images/basic2.png Graphic file (type png)
+<use images/basic2.png>
+Package pdftex.def Info: images/basic2.png  used on input line 21.
+(pdftex.def)             Requested size: 153.64644pt x 88.33629pt.
+File: images/basic3.png Graphic file (type png)
+<use images/basic3.png>
+Package pdftex.def Info: images/basic3.png  used on input line 29.
+(pdftex.def)             Requested size: 153.64644pt x 99.05194pt.
+File: images/basic4.png Graphic file (type png)
+<use images/basic4.png>
+Package pdftex.def Info: images/basic4.png  used on input line 37.
+(pdftex.def)             Requested size: 153.64644pt x 70.188pt.
+) (./chapters/details/PCB.tex
+
+[18]
 File: images/basic1.png Graphic file (type png)
 <use images/basic1.png>
 Package pdftex.def Info: images/basic1.png  used on input line 13.
@@ -1328,21 +1367,21 @@ Package pdftex.def Info: images/basic4.png  used on input line 37.
 (pdftex.def)             Requested size: 153.64644pt x 70.188pt.
 ))
 
-[17]
-
-[18]
-
 [19]
+
+[20]
+
+[21]
 Chapter 6.
 (./chapters/Conclusion.tex
 
-[20
+[22
 
 ])
 
-[21] (./chapters/References.tex)
+[23] (./chapters/References.tex)
 
-[22
+[24
 
 ] (./main.aux)
  ***********
@@ -1354,22 +1393,22 @@ L3 programming layer <2024-05-27>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A0C6C0AD6551780A7CB32144E19E9A2E;9372.
+(rerunfilecheck)             Checksum: 373656A77986DA5E7A96227558218FD1;10069.
  ) 
 Here is how much of TeX's memory you used:
- 27654 strings out of 473584
- 530796 string characters out of 5730347
+ 27672 strings out of 473584
+ 531174 string characters out of 5730347
  1942905 words of memory out of 5000000
- 49924 multiletter control sequences out of 15000+600000
+ 49930 multiletter control sequences out of 15000+600000
  573536 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,476b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,7n,93p,476b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/texliv
 e/texdir/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (27 pages, 3298800 bytes).
+Output written on main.pdf (29 pages, 3302438 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 121 named destinations out of 1000 (max. 500000)
- 508 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 532 words of extra memory for PDF output out of 10000 (max. 10000000)
 

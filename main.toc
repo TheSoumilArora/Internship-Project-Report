@@ -43,16 +43,19 @@
 \contentsline {subsection}{\numberline {5.3.2}Types of Converters and Why LLC}{13}{subsection.5.3.2}%
 \contentsline {section}{\numberline {5.4}Hardware Testing}{14}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Resonant Converters}{14}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Types of Converters and Why LLC}{14}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.2}Types of Converters and Why LLC}{15}{subsection.5.4.2}%
 \contentsline {section}{\numberline {5.5}Design of LLC Converter as per 48V - 1.8kW Specification}{15}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}Resonant Converters}{15}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Types of Converters and Why LLC}{15}{subsection.5.5.2}%
-\contentsline {section}{\numberline {5.6}Calculation of Transformer for 110V - 3kW Specification}{16}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Resonant Converters}{16}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Types of Converters and Why LLC}{16}{subsection.5.6.2}%
-\contentsline {section}{\numberline {5.7}PCB Design}{17}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Resonant Converters}{17}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Types of Converters and Why LLC}{17}{subsection.5.7.2}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{20}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{20}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Scope}{21}{section.6.2}%
+\contentsline {subsection}{\numberline {5.5.2}Types of Converters and Why LLC}{16}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Calculation of Transformer for 110V - 3kW Specification}{17}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Resonant Converters}{17}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Types of Converters and Why LLC}{17}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Frequency-Gain Curve Plotter for LLC Converters}{18}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Resonant Converters}{18}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Types of Converters and Why LLC}{18}{subsection.5.7.2}%
+\contentsline {section}{\numberline {5.8}PCB Design}{19}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Resonant Converters}{19}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Types of Converters and Why LLC}{19}{subsection.5.8.2}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{22}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{22}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Scope}{23}{section.6.2}%
