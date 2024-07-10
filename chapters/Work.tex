@@ -49,6 +49,11 @@ Throughout the rest of the internship, I was involved in debugging the hardware 
 Multiple issues (such as issue in the feedback signal, issue with the boosting of the voltage, correct mapping of status LEDs to the corresponding pins on the microcontroller) arised during the testing phase which needed to be addressed and resolved to ensure that the circuit was working properly.
 The biggest challenge was when we hooked up multiple LLCs in parallel to perform load sharing and we observed oscillications in the load shared. This was solved later by my analysis of the circuit.
 
+\section{Frequency-Gain Curve Plotter for LLC Converters}
+Based on the literature that I read during the course of my internship, I made a generalised Frequency-Gain Curve Plotter for the LLC Converter. This plotter would help in understanding the behavior of the converter and would be useful in designing a converter.
+\noindent
+All we need to do is input our requirements (such as minimum and maximum output voltage, desired resonant frequency, output power) and one or two variables that we choose according to our design and we would get the Frequency-Gain curve for the converter, basically the response of the LLC tank (Gain) for various switching frequencies and then we can tune out the values by optimising the graph as per our requirements.
+
 \section{Design - Calculation of LLC values}
 The next step was to design the LLC Converter and calculate the values of the components that would be used in the design. This involved the following steps:
 
@@ -61,11 +66,6 @@ The next step was to design the LLC Converter and calculate the values of the co
     \item \textbf{Optimizing the design}: Optimizing the converter design to maximize efficiency and minimize power losses.
     \item \textbf{Documenting the design}: Documenting the design of the converter to ensure that it can be replicated in the future.
 \end{itemize}
-
-\section{Frequency-Gain Curve Plotter for LLC Converters}
-Based on the literature that I read during the course of my internship, I made a generalised Frequency-Gain Curve Plotter for the LLC Converter. This plotter would help in understanding the behavior of the converter and would be useful in designing a converter.
-\noindent
-All we need to do is input our requirements (such as minimum and maximum output voltage, desired resonant frequency, output power) and one or two variables that we choose according to our design and we would get the Frequency-Gain curve for the converter, basically the response of the LLC tank (Gain) for various switching frequencies and then we can tune out the values by optimising the graph as per our requirements.
 
 \section{Suggestions in current design}
 Based on the simulation and analysis of the existing circuit, some changes such as change in the transformer core etc. were suggested in the design to improve the performance and efficiency of the converter. These changes arised by noting that the maximum heat is generated in the transformer only in the current design, so we can improve the efficiency of the current converter as well by changing the transformer core.
