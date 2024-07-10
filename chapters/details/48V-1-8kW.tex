@@ -1,43 +1,94 @@
-\subsection{Resonant Converters}
-Resonant converters are a type of power converter that uses a resonant circuit to store energy and provide a smooth output voltage. These converters utilize resonant circuits, consisting of inductors, capacitors, and switches, to regulate the flow of energy. They are often used in applications where a high-quality, ripple-free output voltage is required.\\
-The resonant frequency of the converter is determined by the values of the inductor and capacitor in the resonant circuit. The output voltage of the converter is also determined by the resonant frequency.\\
-Resonant converters are more efficient than non-resonant converters, and they can produce a higher-quality output voltage. However, they are also more complex to design and build.
+I was given the task to design an LLC Converter as per the following specifications:
 
-\subsection{Types of Converters and Why LLC}
-Now there are various types of configurations of resonant converters possible.
-
+\begin{itemize}
+    \item Input Voltage to LLC (From PFC) = 400V DC (with 10V ripple)
+    \item Output Voltage Range = 42V - 65V DC
+    \item Output Power = 1.8kW
+\end{itemize}
 \noindent
-An ideal transformer has its magnetizing inductor in parallel with its input winding. This parallel magnetizing inductor can be used as part of the resonant circuit.
-\begin{figure}[ht]
+Here's a step-by-step process of how I designed the LLC:
+
+\subsection{Transformer Turn Ratio}
+The turn ratio of the transformer is given by the ratio of number of turns on the primary side, and the number of turns on the secondary side, i.e., $n_1 / n_2$, where,\\
+$n_1$ is the number of turns at primary side,\\
+$n_2$ is the number of turns at secondary side.\\
+\\
+Let $n = n_1 / n_2 =$ transformer turn ratio, $M_g =$ gain of LLC\\
+We know that,
+\begin{center}
+    $n = M_g * (\frac{V_{in_{nom}}}{V_{out_{nom}}}) * (\frac{1}{2})$
+\end{center}
+Where,\\
+$V_{in_{nom}}$ = Nominal Input Voltage = 400V DC\\
+$V_{out_{nom}}$ = Nominal Output Voltage = 52V DC\\
+$M_g$ = Gain of LLC = 1 (unity) ; We take it as 1 for this calculation since we want our converter to operate at resonance at nominal output voltage.\\
+We multiplied by $1/2$ because we are using a half-bridge configuration.
+\\
+Therefore,
+\begin{center}
+    $n = 1 * (\frac{400}{52}) * (\frac{1}{2}) = 3.846$\\
+\end{center}
+
+\subsection{LLC Gain}
+Now we need to calculate the maximum and minimum gains that we require for our LLC converter. These gain values are calculated W.R.T. the nominal output voltage.\\
+$V_{out_{min}} = 42V, V_{out_{max}} = 65V$\\
+$V_{in_{nom}} = 400V, V_{in_{min}} = 390V, V_{in_{max}} = 410V$ (PFC Output)\\
+Since,
+\begin{center}
+    $V_{out} = V_{in} * (\frac{1}{2}) * M_g * \frac{1}{n}$
+\end{center}
+We get,
+\begin{center}
+    $M_g = 2n * \frac{V_{out}}{V_{in}}$
+\end{center}
+Hence,
+\begin{center}
+    $M_{g_{min}} = 2n * \frac{V_{out_{min}}}{V_{in_{max}}} = 2 * 3.846 * \frac{42}{410} = 0.788$\\
+    $M_{g_{max}} = 2n * \frac{V_{out_{max}}}{V_{in_{min}}} = 2 * 3.846 * \frac{65}{390} = 1.283$\\
+\end{center}
+So, we need the gain of the LLC to be between 0.788 and 1.283
+
+\subsection{Equivalent Resistance}
+Next step is to calculate the equivalent resistance of the transformer, the rectifier circuit and the load resistance as per the FHA method (First Harmonic Approximation)\\
+We require this step as we are replacing the non-linear part of the circuit with an equivalent resistor across the LLC such that the loading of the resistor is same as that of the non-linear part.\\
+We know that,
+\begin{center}
+    $R_{ac} = (\frac{n_1}{n_2})^2 * \frac{8}{\pi^2} * R_L$\\
+\end{center}
+Also, $R_L = \frac{V_{out_{nom}}^2}{Power} = 1.502\Omega$\\
+Hence,
+\begin{center}
+    $R_{ac} = 3.846^2 * \frac{8}{\pi^2} * 1.502 = 18.03\Omega$\\
+\end{center}
+
+\subsection{Choosing value of m}
+I will be using a value of m = 6.5 (because we can take any value between 6-10 generally and then we can design our system accordingly).\\
+\href{https://www.youtube.com/watch?v=qDT5xw1kgZs&t=391s}{Here is a video that explains the effect of changing m.} (Ctrl / Cmd + Click)\\
+Basically, m is the ratio of the magnetizing inductance to the leakage inductance of the transformer.\\
+A lower value of m will have much more gain at a particular frequency considering everything else is kept constant, while a larger value of m dampens the frequency - gain curve. (Figure \ref*{fig:m_effect})\\
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{basic1.png}
-    \label{fig:basic1}
+    \includegraphics[width=0.8\textwidth]{images/m_effect.png}
+    \caption{Effect of m on Frequency-Gain Curve}
+    \label{fig:m_effect}
 \end{figure}
-
 \noindent
-In the real world, a transformer always comes with a leakage inductor in series with the transformer windings. This series leakage inductor can also be used as a part of the resonant circuit that we intend to design.
-\begin{figure}[ht]
+Note: This is a starting point our design. Later on, after other values such as $L_r$, $C_r$ etc. are calculated, we can tune this value further as per our requirements to either minimise losses and hence improving efficiency, or get more gain from the LLC tank.
+
+\subsection{LLC Values}
+As per the given values, (assuming $f_r = 127kHz$ because that is the same frequency that we use for 110V system and usually a resonant frequency for LLC is taken between 100-150kHz) the frequency – gain curve according to this setup is as follows (Figure \ref*{fig:image4}):
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{basic2.png}
-    \label{fig:basic2}
+    \includegraphics[width=\textwidth]{images/image4.png}
+    \caption{Gain-Frequency Plot for 48V-1.8kW LLC Converter}
+    \label{fig:image4}
 \end{figure}
-
-\noindent
-So essentially, we require at least one inductor in series and one in parallel with the transformer for the resonant circuit that we will be designing. (We are using these inductors as part of the resonant circuit to reduce the overall cost of the circuit by minimizing the components used)
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.3\textwidth]{basic3.png}
-    \label{fig:basic3}
-\end{figure}
-
-\noindent
-Hence, only one configuration of a resonant circuit is possible with two inductors, i.e. an LLC configuration (2 inductors + 1 capacitor)
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.3\textwidth]{basic4.png}
-    \label{fig:basic4}
-\end{figure}
-
-\noindent
-Using an LLC Resonant circuit gives us another advantage as well, i.e. the resonant tank circuit (circuit made by the capacitor and the 2 inductors) allows for filtering of the square wave harmonics generated by the switching circuit into a sinewave of fundamental frequency for the transformer.
-However, the gain of an LLC Resonant Circuit is dependent on the switching frequency and the load applied across the circuit, hence it needs to be tuned considering the switching frequency and the output load to ensure that the converter efficiently operates across a wide range of loads by designing it such that the tank’s gain is as per our requirements.
+\begin{itemize}
+    \item The upper horziontal line represents the maximum gain of 1.283
+    \item The lower horziontal line represents the minimum gain of 0.788
+    \item The vertical lines at the intersection of the horizontal lines with the curve represent the maximum and minimum operating frequencies of the converter respectively.
+\end{itemize}
+As per the graph, $L_r$ values more than $8\mu H$ are of no use as they do not reach the maximum gain that we require.\\
+Hence a value of $L_r = 8\mu H$ is chosen. (We can also go for $L_r = 7\mu H$ if we wish to have some room for more gain, but theoritically, $8\mu H$ is the most optimal value with the given conditions and our chosen value of $m = 6.5$)\\
+The operating frequency of the converter is from $68.5kHz$ to $270kHz$.
+We can calculate the remaining values of the LLC tank from the equations mentioned in Figure \ref*{fig:f-gain-circuit}.
