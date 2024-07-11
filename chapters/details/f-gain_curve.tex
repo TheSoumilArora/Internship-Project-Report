@@ -1,7 +1,7 @@
 As per the literature I read during the initial part of my internship, I designed a generalised circuit (Figure \ref*{fig:f-gain-circuit}) that takes just the basic required paramteres of any LLC Converter, and calculates the rest accordingly, and give us the theoritical plot of the frequency-gain curve of the converter, which mostly coincides with the actual plot of the gain v/s frequency as well. (Verified that experimentally by measuring the frequencies at multiple points and calculating the gain of the LLC tank at that instant and plotting it against the frequency at that instant)
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{f-gain-circuit.png}
+    \includegraphics[width=1\textwidth]{f-gain-circuit.png}
     \caption{Schematic of the frequency-gain curve plotter}
     \label{fig:f-gain-circuit}
 \end{figure}
@@ -12,6 +12,8 @@ As per the literature I read during the initial part of my internship, I designe
     \item The .step parameter is used to generate multiple graphs at the same time with different specs (for example, the given graph (Figure \ref*{fig:f-gain-out}), shows multiple graphs for different combinations of LLC simultaneously). This helps in fine-tuning the values according to our gain requirements.
     \item The top-left parameters are equations and other variables that are dependent on the values that we give as input.
     \item The bottom-left parameter is the range of frequencies between which we want to plot the graph. (As per the current circuit, between 10kHz to 500kHz with step size of 100Hz)
+    \item $R_{ac}$ is the equivalent resistance of the transformer, rectifier, and the output filter in the circuit.
+    \item The input to the circuit in simulation is a AC signal of 1V amplitude and 0V DC offset. (This is done in order to simplify calculations; The value of voltage in the output waveform is the value of gain of the LLC Tank only)
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -19,3 +21,8 @@ As per the literature I read during the initial part of my internship, I designe
     \caption{Output of the frequency-gain curve plotter}
     \label{fig:f-gain-out}
 \end{figure}
+We can add horizontal lines as to the required gain and see the cut-off frequencies for the LLC operation between our desired gain range.\\
+\noindent
+This stpe is crucial because we don't want to operate the converter at very high frequencies, because switching losses increase with the increase in switching frequency. We don't want to operate at lower frequencies because then the output voltage ripple will be higher and we don't want that either.\\
+\noindent
+Hence we need to fine-tune the resonant component values to get the optimal graph at the optimal switching frequencies which is easy to control, is less sensitive to noise, and has the required gain as well.
